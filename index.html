@@ -1,0 +1,141 @@
+<!-- 
+ Resources Referenced: 
+ https://www.w3schools.com/cssref/pr_font_weight.php  Used to learn how to adjust font weights such as bold
+ https://stackoverflow.com/questions/62238847/how-to-make-span-and-image-on-the-same-line   Used to learn how to make an image and a text align on the same line
+ https://www.shecodes.io/athena/27147-how-to-write-the-degree-symbol-in-html#:~:text=To%20write%20the%20degree%20symbol%20in%20HTML%2C%20you%20can%20use,(%C2%B0)%20on%20the%20webpage.  Used to learn how to correctly denote the degree symbol in HTML code
+ https://www.w3schools.com/css/css_background_image.asp  Used to learn how to decorate the page with a selected background picture in my CSS file
+ https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries  Used to learn how to make the page responsive to the screen size
+ Asked ChatGPT how to specify the font-family to guarantee consistent typography across different OS.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="weather-container">
+    <div class="current-weather">
+      <div class="current-top">
+        <h1>Sunny</h1>
+        <div class="current-info">
+          <img src="/assets/sunny.png" alt="Sunny Icon" class="current-icon" />
+          <div class="temp">42&deg;</div>
+          <div class="high-low">H: 51&deg; L: 28&deg;</div>
+          <div class="location">
+            <img src="/assets/location.png" alt="Location Icon" />
+            <span>Philadelphia</span>
+          </div>
+          <div class="sunrise">
+            <img src="/assets/sunrise.png" alt="Sunrise Icon" />
+            <span>Sunrise: 7:10 am</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="forecast">
+      <h2>7-day Forecast</h2>
+      <div class="forecast-item">
+        <div class="day">Today</div>
+        <img src="/assets/sunny.png" alt="Sunny Icon" />
+        <div class="temps">51&deg;/28&deg;</div>
+      </div>
+      <div class="forecast-item">
+        <div class="day">Mon</div>
+        <img src="/assets/partly-cloudy.png" alt="Partly Cloudy Icon" />
+        <div class="temps">53&deg;/37&deg;</div>
+      </div>
+      <div class="forecast-item">
+        <div class="day">Tue</div>
+        <img src="/assets/partly-cloudy.png" alt="Partly Cloudy Icon" />
+        <div class="temps">49&deg;/35&deg;</div>
+      </div>
+      <div class="forecast-item">
+        <div class="day">Wed</div>
+        <img src="/assets/cloudy.png" alt="Cloudy Icon" />
+        <div class="temps">43&deg;/31&deg;</div>
+      </div>
+      <div class="forecast-item">
+        <div class="day">Thu</div>
+        <img src="/assets/rainy.png" alt="Rainy Icon" />
+        <div class="temps">39&deg;/30&deg;</div>
+      </div>
+      <div class="forecast-item">
+        <div class="day">Fri</div>
+        <img src="/assets/windy.png" alt="Windy Icon" />
+        <div class="temps">45&deg;/33&deg;</div>
+      </div>
+      <div class="forecast-item">
+        <div class="day">Sat</div>
+        <img src="/assets/sunny.png" alt="Sunny Icon" />
+        <div class="temps">47&deg;/36&deg;</div>
+      </div>
+    </div>
+
+    <div class="extra-info">
+      <div class="info-item">
+        <img src="/assets/aqi.png" alt="AQI Icon" />
+        <div class="info-text">
+          <div class="label">Air Quality:</div>
+          <div class="value">41 (Good)</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <img src="/assets/sunset.png" alt="Sunset Icon" />
+        <div class="info-text">
+          <div class="label">Sunset:</div>
+          <div class="value">5:16 pm</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <img src="/assets/windy.png" alt="Wind Icon" />
+        <div class="info-text">
+          <div class="label">Wind:</div>
+          <div class="value">16 mph</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <img src="/assets/humidity.png" alt="Humidity Icon" />
+        <div class="info-text">
+          <div class="label">Humidity:</div>
+          <div class="value">53%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hourly-forecast">
+        <h2>Hourly Forecast</h2>
+        <div class="hourly-forecast-row">
+          <div class="hour-item">
+            <div class="hour">Now</div>
+            <img src="/assets/sunny.png" alt="Sunny Icon" />
+            <div class="hour-temp">35°</div>
+          </div>
+          <div class="hour-item">
+            <div class="hour">10 am</div>
+            <img src="/assets/sunny.png" alt="Sunny Icon" />
+            <div class="hour-temp">37°</div>
+          </div>
+          <div class="hour-item">
+            <div class="hour">11 am</div>
+            <img src="/assets/sunny.png" alt="Sunny Icon" />
+            <div class="hour-temp">40°</div>
+          </div>
+          <div class="hour-item">
+            <div class="hour">12 pm</div>
+            <img src="/assets/sunny.png" alt="Sunny Icon" />
+            <div class="hour-temp">43°</div>
+          </div>
+          <div class="hour-item">
+            <div class="hour">1 pm</div>
+            <img src="/assets/sunny.png" alt="Sunny Icon" />
+            <div class="hour-temp">47°</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
