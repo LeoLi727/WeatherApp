@@ -162,10 +162,16 @@
 
   .hourly-forecast-row {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 0;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hourly-forecast-row::-webkit-scrollbar {
+    display: none;
   }
 
   .hour-item {
@@ -173,8 +179,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 1;
-    margin: 0;
+    flex: 0 0 auto;
+    min-width: 60px;
   }
 
   .hour-item img {
@@ -190,6 +196,15 @@
 
   .hour-temp {
     font-size: 14px;
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .info-item.clickable {
+    text-decoration: none;
+    color: inherit;
   }
 
   @media (max-width: 400px) {
